@@ -128,6 +128,23 @@
     </dependencies>
 
     <build>
+        <!-- 资源拷贝插件，实现在打包时自动拷贝java目录下以及resources目录下的xml的配置文件 -->
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                    <include>**/*.properties</include>
+                    <include>**/*.txt</include>
+                </includes>
+            </resource>
+        </resources>
         <finalName>oa_system</finalName>
         <plugins>
             <plugin>
